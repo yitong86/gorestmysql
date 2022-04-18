@@ -6,10 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+//this entity annotation is meant for the repository to recognize this class as a class,
+// that can be user to make a table
 @Entity
 public class User {
-@Id
-@GeneratedValue(strategy= GenerationType.AUTO)
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
 
@@ -17,6 +21,8 @@ public class User {
     private String email;
     private String gender;
     private String status;
+
+
     public Integer getId() {
         return id;
     }
